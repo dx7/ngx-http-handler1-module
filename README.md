@@ -12,7 +12,7 @@ Configuration
 A location example:
 
       location /example {
-          handler1;
+          handler1 "on";
       }
 
 
