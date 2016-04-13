@@ -8,10 +8,12 @@ typedef struct {
     ngx_flag_t enabled;
 } ngx_http_handler1_loc_conf_t;
 
+
 static ngx_int_t ngx_http_handler1_handler(ngx_http_request_t *r);
 static ngx_int_t ngx_http_handler1_init(ngx_conf_t *cf);
 static void* ngx_http_handler1_create_loc_conf(ngx_conf_t *cf);
 static char* ngx_http_handler1_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child);
+
 
 // module directive
 static ngx_command_t ngx_http_handler1_commands[] = {
@@ -24,6 +26,7 @@ static ngx_command_t ngx_http_handler1_commands[] = {
       ngx_null_command
 };
 
+
 // module context
 static ngx_http_module_t ngx_http_handler1_module_ctx = {
     NULL,                                /* preconfiguration */
@@ -35,6 +38,7 @@ static ngx_http_module_t ngx_http_handler1_module_ctx = {
     ngx_http_handler1_create_loc_conf,   /* create location configuration */
     ngx_http_handler1_merge_loc_conf     /* merge location configuration */
 };
+
 
 // create location config
 static void *
@@ -50,6 +54,7 @@ ngx_http_handler1_create_loc_conf(ngx_conf_t *cf)
     return conf;
 }
 
+
 // merge location config
 static char *
 ngx_http_handler1_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
@@ -61,6 +66,7 @@ ngx_http_handler1_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
 
     return NGX_CONF_OK;
 }
+
 
 // the module definition
 ngx_module_t ngx_http_handler1_module = {
@@ -77,6 +83,7 @@ ngx_module_t ngx_http_handler1_module = {
     NULL,                              /* exit master */
     NGX_MODULE_V1_PADDING
 };
+
 
 // the handler
 static ngx_int_t
@@ -123,6 +130,7 @@ ngx_http_handler1_handler(ngx_http_request_t *r)
 
     return ngx_http_output_filter(r, &out);
 }
+
 
 // handler installation
 static ngx_int_t
