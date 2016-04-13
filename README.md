@@ -31,3 +31,17 @@ Directives
         --prefix=/usr/local/nginx
     $ make
     $ make install
+
+
+Expected Result
+---------------
+
+$ curl -i http://localhost:8080/handler1
+HTTP/1.1 200 OK
+Server: nginx/1.9.14
+Date: Wed, 13 Apr 2016 00:14:35 GMT
+Content-Type: text/html
+Content-Length: 31
+Connection: keep-alive
+
+handler1 module here, everyone!

@@ -50,7 +50,7 @@ static ngx_int_t
 ngx_http_handler1_handler(ngx_http_request_t *r)
 {
     // generating a response
-    u_char* some_bytes = (u_char*) "dx7 handler, everyone!";
+    u_char* some_bytes = (u_char*) "handler1 module here, everyone!";
     int some_bytes_length;
     for (some_bytes_length = 0; some_bytes[some_bytes_length] != '\0'; some_bytes_length++);
 
